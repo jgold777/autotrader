@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 1.5
+  exterior_color: MyString
+  interior_material: MyString
+  condition: MyString
+  price: 1.5
+  category_id: 1
+
+two:
+  price: 1.5
+  exterior_color: MyString
+  interior_material: MyString
+  condition: MyString
+  price: 1.5
+  category_id: 1
