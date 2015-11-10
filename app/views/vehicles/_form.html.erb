@@ -3,6 +3,7 @@
 
   <div class="form-inputs">
     <%= f.association :category %>
+    <%= f.association :features, as: :check_boxes %>
     <%= f.input :price %>
     <%= f.input :exterior_color %>
     <%= f.input :interior_material %>
