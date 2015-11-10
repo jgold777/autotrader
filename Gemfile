@@ -36,6 +36,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end
+gem 'devise'
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -46,3 +47,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'simple_form'
+
