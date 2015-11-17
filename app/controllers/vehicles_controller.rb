@@ -15,7 +15,7 @@ class VehiclesController < ApplicationController
 
   # GET /vehicles/new
   def new
-    @vehicle = Vehicle.new
+    @vehicle = current_user.vehicles.new
   end
 
   # GET /vehicles/1/edit
@@ -25,7 +25,7 @@ class VehiclesController < ApplicationController
   # POST /vehicles
   # POST /vehicles.json
   def create
-    @vehicle = Vehicle.new(vehicle_params)
+    @vehicle = current_user.vehicles.new(vehicle_params)
 
     respond_to do |format|
       if @vehicle.save
@@ -76,6 +76,7 @@ class VehiclesController < ApplicationController
                                       :condition, 
                                       :price, 
                                       :category_id,
+                                      :user_id,
                                       { feature_ids: []})
     end
 end

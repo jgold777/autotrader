@@ -1,9 +1,15 @@
-<p>
-  <h1>Category</h1>
-  <strong>Category:</strong>
-  <%= @vehicle.category.make.name %>
-  <%= @vehicle.category.name %>
 
+  <strong>User:</strong>
+<%= @vehicle.user.email if @vehicle.user.present? %>
+<p>
+  <strong>Category:</strong>
+  <%- if @vehicle.category.present? %>
+    <%- if @vehicle.category.make.present? %>
+    <%= @vehicle.category.make.name %>
+      
+    <% end %>
+  <%= @vehicle.category.name %>
+  <% end %>
 </p>
 
 <p>
@@ -30,7 +36,7 @@
   <strong>Price:</strong>
   <%= @vehicle.price %>
 </p>
-<h2>Features</h2>
+  <strong>Features:</strong>
 <ul> 
 <%- @vehicle.features.each do |feature| %>
   <li><%= feature.name %></li>
